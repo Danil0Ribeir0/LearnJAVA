@@ -1,0 +1,15 @@
+public class Retangulo {
+	
+	public static double larg;
+	public static double comp;
+	
+	public static double Area() {
+		return larg * comp;
+	}
+	public static double Perimetro() {
+		return (2 * larg) + (2 * comp);
+	}
+	public static double Diagonal() {
+		return Math.sqrt(Math.pow(comp, 2) + Math.pow(larg, 2));
+	}
+}
