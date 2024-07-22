@@ -1,0 +1,18 @@
+import java.util.Scanner;
+import entidades.Retangulo;
+
+public class Programa2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Digite o comprimento e largura do retângulo: ");
+		Retangulo.comp = sc.nextDouble();
+		Retangulo.larg = sc.nextDouble();
+		
+		System.out.println("Area = " + Retangulo.Area());
+		System.out.println("Perimeter = " + Retangulo.Perimetro());
+		System.out.println("Diagonal = " + Retangulo.Diagonal());
+		sc.close();
+	}
+}
