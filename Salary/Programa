@@ -1,1 +1,30 @@
+import java.util.Scanner;
 
+import entidades.Salario;
+
+public class Programa2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Name: ");
+		Salario.name = sc.nextLine();
+		System.out.print("Gross Salary: ");
+		Salario.grossSalary = sc.nextDouble();
+		System.out.print("Tax: ");
+		Salario.tax = sc.nextDouble();
+		
+		System.out.println();
+		System.out.println("Employee: " + Salario.name + ", $" + Salario.NetSalary());
+		
+		System.out.println();
+		System.out.println("Wich percentage to encrease salary? ");
+		double percentage = sc.nextDouble();
+		Salario.IncreaseSalary(percentage);
+		
+		System.out.println();
+		System.out.println("Updated data: " + Salario.name + ", $" + Salario.NetSalary());
+		sc.close();
+	}
+
+}
