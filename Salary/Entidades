@@ -1,0 +1,13 @@
+public class Salario {
+	public static String name;
+	public static double grossSalary;
+	public static double tax;
+	
+	public static double NetSalary() {
+		return grossSalary - tax;
+	}
+	public static void IncreaseSalary(double percentage) {
+		grossSalary += grossSalary * (percentage/100);
+	}
+	
+}
