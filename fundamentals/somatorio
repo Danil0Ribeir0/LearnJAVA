@@ -1,0 +1,28 @@
+package fundamentos;
+
+import java.util.Scanner;
+
+public class somatorio {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		int qnt, soma, i, num;
+		System.out.print("Digite a quantidade de números: ");
+		qnt = sc.nextInt();
+		soma = 0;
+		
+		i = 0;
+		while (i < qnt) {
+			i++;
+			System.out.print("Número: ");
+			num = sc.nextInt();
+			soma = soma + num;
+		}
+		
+		System.out.println("Soma = " + soma);
+		
+		sc.close();
+	}
+
+}
