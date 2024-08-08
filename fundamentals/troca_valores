@@ -1,0 +1,25 @@
+package fundamentos;
+
+import java.util.Scanner;
+
+public class troca_valores {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		int a, b, aux;
+		System.out.print("Digite o valor de A: ");
+		a = sc.nextInt();
+		System.out.print("Digite o valor de B: ");
+		b = sc.nextInt();
+		
+		aux = a;
+		a = b;
+		b = aux;
+		
+		System.out.println("Novo valor de A: " + a);
+		System.out.println("Novo valor de A: " + b);
+		sc.close();
+	}
+
+}
