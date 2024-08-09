@@ -1,0 +1,42 @@
+package fundamentos;
+
+import java.util.Scanner;
+
+public class serie_infinita {
+	
+	public static int fatorial(int n) {
+		int fator = 1;
+		
+		for (int i = 0;i<n+1;i++) {
+			fator = i * fator;
+		}
+		return fator;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		
+		int n, i, sinal;
+		double x, s, termo;
+		
+		System.out.print("Número de termos: ");
+		n = sc.nextInt();
+		System.out.print("Valor de x: ");
+		x = sc.nextDouble();
+		
+		s = 0.0;
+		i = 1;
+		sinal = 1;
+		
+		for (int j = 0;j<n;j++) {
+			termo = Math.pow(x, i) / fatorial(n);
+			s = s + sinal * termo;
+			i = i + 2;
+			sinal = -sinal;
+		}
+		System.out.println("S = "+ s);
+		
+		sc.close();
+	}
+
+}
